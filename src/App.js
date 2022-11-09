@@ -24,9 +24,7 @@ class App extends React.Component{
         {JSON.stringify(this.state)}
       </div>
     );
-  }
-
-  
+  }  
 }
 
 export default App;
