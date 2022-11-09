@@ -1,18 +1,30 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import 'App.css';
-import { Button } from 'antd';
+import Counter from "Counter";
 
-function App() {
-  return (
-    <div>
-      <button>
-        Hello, React.
-      </button>
-      <Button type="primary" onClick={() => console.log("clicked")}>
-        Hello, React.
-      </Button>
-    </div>
-  );
+// 이벤트 헨들러 속성명은 camelCase
+
+class App extends React.Component{
+  state = {myquery:"", language: ""}
+  onChange = (e) =>{
+    const {name, value} = e.target;
+    this.setState({
+      [name]: value,
+    })
+  };
+  render() {
+
+    return(
+      <div>
+        <Counter onClick={() => console.log("clicked")}/>
+        <input name="myquery" onChange={this.onChange}/>
+        <input name="language" onChange={this.onChange}/>
+        <hr/>
+        {JSON.stringify(this.state)}
+      </div>
+    );
+  }
 }
 
 export default App;
