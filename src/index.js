@@ -7,11 +7,12 @@ import TodoList from 'TodoList';
 import App3 from './App3';
 import EpisodeList from 'EpisodeList';
 import App4 from 'App4';
+import App5 from 'App5';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App4 />
+    <App5 />
   </React.StrictMode>
 );
 
